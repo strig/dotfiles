@@ -121,7 +121,7 @@ function dbash() {
     docker exec -it $1 /bin/bash 
 }
 function dmanage() {
-    docker-compose exec app ./manage.py "$@"
+    docker exec -it app ./manage.py "$@"
 }
 alias devshell="docker exec -it app ./manage.py shell_plus"
 alias d-c="docker-compose"
@@ -134,3 +134,7 @@ BULLETTRAIN_PROMPT_ORDER=(
   dir
   git
 )
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
