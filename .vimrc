@@ -7,4 +7,4 @@ set shiftwidth=4
 set expandtab
 
 syntax on
-colorscheme darkblue
+colorscheme murphy

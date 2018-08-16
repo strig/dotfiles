@@ -89,6 +89,7 @@ export EDITOR=vim
 alias gerp="grep"
 alias gti="git"
 alias gut="git"
+alias explorer="nautilus" # because i can never remember what it's called
 
 # zsh 
 alias zshconfig="vim ~/.zshrc"
