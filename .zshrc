@@ -104,7 +104,7 @@ alias gdd="git diff HEAD^ HEAD" # diff current and last commit
 alias gds="git diff --staged"
 alias gb="git branch"
 alias gba="git branch -a"
-alias gdb="git diff --stat staging"
+alias git-diff-branch="git diff --stat staging"
 alias gdns="git diff -- . ':(exclude)breakdown/static/css'"
 alias gpl="git pull"
 
@@ -115,7 +115,7 @@ alias test-env="source /vagrant/test-venv/bin/activate"
 
 # Projects
 alias hatch="cd ~/code/hatch/code"
-
+alias run-tests="docker exec -it app ./test.sh"
 # docker
 alias dexec="docker exec -it"
 function dbash() {
