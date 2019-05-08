@@ -126,6 +126,7 @@ function dmanage() {
 }
 alias devshell="docker exec -it app ./manage.py shell_plus"
 alias d-c="docker-compose"
+alias dbup="docker-compose up -d db"
 alias debugserver="docker-compose run --service-ports --rm --name app app"
 alias dbshell="docker exec -it code_db_1 bash -c 'mysql -uroot -p"\$MYSQL_ROOT_PASSWORD"'"
 export PATH=~/.local/bin:$PATH
