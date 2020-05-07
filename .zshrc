@@ -90,8 +90,9 @@ alias gerp="grep"
 alias gti="git"
 alias gut="git"
 alias explorer="nautilus" # because i can never remember what it's called
+alias grep="grep -i"
 
-# zsh 
+# zsh
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias zfresh="source ~/.zshrc"
@@ -102,10 +103,11 @@ alias gs="git status"
 alias gd="git diff"
 alias gdd="git diff HEAD^ HEAD" # diff current and last commit
 alias gds="git diff --staged"
-alias gb="git branch"
+alias gb="git branch --sort=-committerdate | head -n 15"
 alias gba="git branch -a"
 alias git-diff-branch="git diff --stat staging"
 alias gdns="git diff -- . ':(exclude)breakdown/static/css'"
+alias gdsns="git diff --staged -- . ':(exclude)breakdown/static/css'"
 alias gpl="git pull"
 
 # Python
@@ -119,7 +121,7 @@ alias run-tests="docker exec -it app ./test.sh"
 # docker
 alias dexec="docker exec -it"
 function dbash() {
-    docker exec -it $1 /bin/bash 
+    docker exec -it $1 /bin/bash
 }
 function dmanage() {
     docker exec -it app ./manage.py "$@"
@@ -129,6 +131,8 @@ alias d-c="docker-compose"
 alias dbup="docker-compose up -d db"
 alias debugserver="docker-compose run --service-ports --rm --name app app"
 alias dbshell="docker exec -it code_db_1 bash -c 'mysql -uroot -p"\$MYSQL_ROOT_PASSWORD"'"
+
+
 export PATH=~/.local/bin:$PATH
 
 BULLETTRAIN_PROMPT_ORDER=(
