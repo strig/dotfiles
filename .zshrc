@@ -109,6 +109,7 @@ alias git-diff-branch="git diff --stat staging"
 alias gdns="git diff -- . ':(exclude)breakdown/static/css'"
 alias gdsns="git diff --staged -- . ':(exclude)breakdown/static/css'"
 alias gpl="git pull"
+alias glog="git log --pretty=format:'%C(yellow)%h %C(cyan)%ar %C(auto)%d %Creset %s' --graph --all"
 
 # Python
 alias va="source venv/bin/activate"
